@@ -1,12 +1,12 @@
+const asyncWrapper = require('../middleware/asyncWrapper');
 
-
-const getProducts = async(req,res,next) => {
+const getProducts = asyncWrapper(async(req,res,next) => {
     res.status(200).json({mesage:'All Products'});
-}
+});
 
-const getProductsStatic = async(req,res,next) => {
+const getProductsStatic = asyncWrapper(async(req,res,next) => {
     res.status(200).json({message:'All Products Static'});
-}
+});
 
 module.exports = {
     getProducts,
