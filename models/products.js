@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema({
         type: Number,
         default: 4.5
     },
-    feactured:{
+    featured:{
         type: Boolean,
         default: false
     },
@@ -30,4 +30,4 @@ const productSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model(productSchema);
+module.exports = mongoose.model('Product',productSchema);
